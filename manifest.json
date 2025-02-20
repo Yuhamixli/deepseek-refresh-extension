@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "DeepSeek Refresh Assistant",
+  "version": "1.0",
+  "description": "Automatically handles DeepSeek server busy messages by retrying generation",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://chat.deepseek.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chat.deepseek.com/*"
+      ],
+      "js": ["js/content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "icons": {
+    "48": "icon48.png"
+  }
+} 
